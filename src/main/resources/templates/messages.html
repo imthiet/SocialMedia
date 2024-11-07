@@ -69,14 +69,7 @@
             <span class="time-ago" th:attr="data-time=${userMessage.lastMessage.timestamp}"></span>
         </div>
 
-        <!-- Chat Box -->
-        <div th:each="userMessage : ${usersWithMessages}" class="chat-box" id="chat-box-[[${userMessage.user.id}]]" style="display: none;">
-            <h5>Chat with <span th:text="${userMessage.user.username}"></span></h5>
-            <div class="chat-messages" id="chat-messages-[[${userMessage.user.id}]]">
-                <!-- Messages will be displayed here -->
-            </div>
-            <input type="text" id="message-input-[[${userMessage.user.id}]]" placeholder="Type a message..." onkeypress="sendMessage(event, [[${userMessage.user.id}]])">
-        </div>
+
 
     </div>
 </div>
